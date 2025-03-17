@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cita médica</title>
+    <link rel="stylesheet" href="styles/estiloCita.css">
+</head>
+<body>
+    <h1>Agendamiento de citas médicas</h1>
+
+    <form id="formulario">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" required>
+
+        <label for="tipoCita">Tipo de cita</label>
+        <input list="lista-tipos" id="tipoCita" required>
+            <datalist id="lista-tipos">
+                <option value="General">
+                <option value="Especialista">
+            </datalist>
+
+        <label for="horario">Horario</label>
+        <input type="time" id="horario" required>
+
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" required>
+
+        <label for="nombreMedico">Nombre del médico</label>
+        <input type="text" id="nombreMedico" required>
+
+        <label for="recordatorio">Recordatorio</label>
+        <input list="lista-recordatorios" id="recordatorio" required>
+            <datalist id="lista-recordatorios">
+                <option value="Correo electrónico">
+                <option value="Mensaje de texto">
+                <option value="Llamada">
+            </datalist>
+
+        <button type="submit">Agendar</button>
+
+    </form>
+
+    <div class="resultado" id="resultado"></div>
+    <script src="scripts/appCita.js"></script>
+
+</body>
+</html>
